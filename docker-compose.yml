@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  couchbase:
+    container_name: couchbase_quick_start
+    image: couchbase:latest
+    ports:
+      - "8091-8096:8091-8096" # ui ports
+      - "11210-11211:11210-11211" # engine ports
+    environment:
+      COUCHBASE_ADMINISTRATOR_USERNAME: Administrator
+      COUCHBASE_ADMINISTRATOR_PASSWORD: 123456
+    # virtual disk paths
+    volumes:
+      - couchbase_data:/opt/couchbase/var
+      - couchbase_config:/opt/couchbase/etc
+
+# virtual disk spaces genereted in virtual machine
+volumes:
+  couchbase_data:
+  couchbase_config:
