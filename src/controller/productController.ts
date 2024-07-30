@@ -46,7 +46,6 @@ export const getProduct = async (req: Request, res: Response) => {
     console.log(error);
   }
 };
-
 // Ürünü ID'ye göre güncelleme
 export const updateProduct = async (req: Request, res: Response) => {
   try {
@@ -65,7 +64,6 @@ export const updateProduct = async (req: Request, res: Response) => {
     console.log(error);
   }
 };
-
 // Ürünü ID'ye göre silme
 export const deleteProduct = async (req: Request, res: Response) => {
   try {
